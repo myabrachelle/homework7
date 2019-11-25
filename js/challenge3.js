@@ -3,12 +3,23 @@
 
 $("#ch3form").click(function(){
     var fruit = $('input[name="fruit"]')
+    var classStanding = $('input[name="standing"]')
+    
     fruit.each(function(){
-        if (fruit.checked)
+        console.log("1st level");
+        if (this.is("checked")) {
+            console.log("2nd level");
             return true;
+        }     
+    })
+
+    classStanding.each(function(){
+        if (this.is("checked")){
+            return true;
+        }
     })
     
-    alert("You must pick a fruit!")
+    alert("You must pick a class standing or a fruit!")
     return false;
 });
 
@@ -27,32 +38,6 @@ $("#ch3form").click(function(){
 //     alert("You must pick a fruit!")
 //     return false;
 // };
-
-
-    // useBilling.onchange = function() {
-    //     let home = document.querySelector("#home");
-    //     if (this.checked){
-    //         home.value = document.querySelector("#billing").value;
-    //         home.disabled = true;}
-    //     else {
-    //         home.value = "";
-    //         home.disabled = false;}
-        
-    //     }
-
-    // $("#useBilling").click(function(){
-    //     if (this.checked){
-    //         console.log("selected and displays same address for both home and billing")
-    //         $("#home").val($("#billing").val());
-    //         $("#home").prop("disabled", true)
-    //     }
-    
-    //     else{
-    //         console.log("not selected")
-    //         $("#home").value = "";
-    //         $("#home").prop("disabled", false)
-    //     }
-    // });
 
 
 

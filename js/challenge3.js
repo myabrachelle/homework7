@@ -9,14 +9,17 @@ $("#ch3form").submit(function(){
 
     if(fruitchecking.val() == undefined && standingchecking.val() == undefined){
         console.log(fruitchecking.val())
+        console.log(standingchecking.val())
         alert("You must pick a class standing or a fruit!")
         return false;
     }
     else if (fruitchecking.val() == undefined){
+        console.log(fruitchecking.val())
         alert("You must pick a fruit!")
         return false;
     }
     else if (standingchecking.val() == undefined){
+        console.log(standingchecking.val())
         alert("You must pick a class standing!")
         return false;
     }
